@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>main.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(128,128,128); font-style: italic; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,0,128); font-weight: bold; }
+.s3 { color: rgb(0,0,0); }
+.s4 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+main.js</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">/** 
+ * 主程序 
+ * Created by liuyy on 2016/7/29. 
+ */</span><span class="s1"> 
+</span><span class="s2">var </span><span class="s1">oneAjaxChart = </span><span class="s2">new </span><span class="s1">AjaxChart</span><span class="s3">({</span><span class="s1"> 
+    container:</span><span class="s4">'elementId'</span><span class="s1">, 
+    chartType:</span><span class="s4">'yourChartType'</span><span class="s1">,</span><span class="s0">//line,pie,column,area</span><span class="s1"> 
+    ajaxUrl:</span><span class="s4">'yourAjaxUrl'</span><span class="s1">, 
+    ajaxParams:</span><span class="s3">{</span><span class="s1"> 
+        param1:</span><span class="s4">'value'</span><span class="s1">, 
+        param2:</span><span class="s2">function</span><span class="s3">(){</span><span class="s1"> 
+            </span><span class="s2">return </span><span class="s4">'value2'</span><span class="s1">; 
+        </span><span class="s3">}</span><span class="s1"> 
+    </span><span class="s3">}</span><span class="s1"> 
+</span><span class="s3">})</span><span class="s1">; 
+ 
+oneAjaxChart</span><span class="s3">.</span><span class="s1">refresh</span><span class="s3">({</span><span class="s1"> 
+    chartData:</span><span class="s3">{</span><span class="s1">series:</span><span class="s3">[]}</span><span class="s1">, 
+    clickHandler:</span><span class="s2">function </span><span class="s3">(</span><span class="s1">xLabel,y</span><span class="s3">) {</span><span class="s1"> 
+         
+    </span><span class="s3">}</span><span class="s1">, 
+    afterUpdate:</span><span class="s2">function </span><span class="s3">() {</span><span class="s1"> 
+         
+    </span><span class="s3">}</span><span class="s1"> 
+</span><span class="s3">})</span><span class="s1">; 
+ 
+</span><span class="s3">(</span><span class="s2">function </span><span class="s3">(</span><span class="s1">$, Highcharts</span><span class="s3">) {</span><span class="s1"> 
+    </span><span class="s0">//======================================</span><span class="s1"> 
+    </span><span class="s0">//Highchart Optoins 全局设置</span><span class="s1"> 
+    </span><span class="s0">//======================================</span><span class="s1"> 
+    </span><span class="s2">var </span><span class="s1">CHART_OPTIONS=</span><span class="s3">{</span><span class="s1"> 
+        global:</span><span class="s3">{</span><span class="s1"> 
+            title:</span><span class="s2">null</span><span class="s1">, 
+            xAxis:</span><span class="s3">{</span><span class="s1"> 
+                categories:</span><span class="s2">function </span><span class="s3">() {</span><span class="s1"> 
+ 
+                </span><span class="s3">}</span><span class="s1"> 
+            </span><span class="s3">}</span><span class="s1">, 
+            tooltip:</span><span class="s3">{</span><span class="s1"> 
+                pointFormat:</span><span class="s4">''</span><span class="s1"> 
+            </span><span class="s3">}</span><span class="s1">, 
+            legend:</span><span class="s3">{</span><span class="s1"> 
+                enabled:</span><span class="s2">false</span><span class="s1"> 
+            </span><span class="s3">}</span><span class="s1">, 
+            yAxis:</span><span class="s3">{</span><span class="s1"> 
+                title:</span><span class="s3">{</span><span class="s1"> 
+                    enabled:</span><span class="s2">true</span><span class="s1"> 
+                </span><span class="s3">}</span><span class="s1"> 
+            </span><span class="s3">}</span><span class="s1"> 
+        </span><span class="s3">}</span><span class="s1">, 
+        line:</span><span class="s3">{</span><span class="s1"> 
+            chart:</span><span class="s3">{</span><span class="s1"> 
+                type:</span><span class="s4">'line'</span><span class="s1"> 
+            </span><span class="s3">}</span><span class="s1">, 
+            plotOptions:</span><span class="s3">{</span><span class="s1"> 
+                line:</span><span class="s3">{</span><span class="s1"> 
+                    dataLabels:</span><span class="s3">{</span><span class="s1"> 
+                        enabled:</span><span class="s2">true</span><span class="s1"> 
+                    </span><span class="s3">}</span><span class="s1"> 
+                </span><span class="s3">}</span><span class="s1"> 
+            </span><span class="s3">}</span><span class="s1"> 
+        </span><span class="s3">}</span><span class="s1"> 
+    </span><span class="s3">}</span><span class="s1"> 
+ 
+</span><span class="s3">})</span><span class="s1">; 
+</span></pre>
+</body>
+</html>
